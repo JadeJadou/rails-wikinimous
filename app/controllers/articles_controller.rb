@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Task.new(article_params)
+    @article = Article.new(article_params)
     @article.save
     redirect_to articles_path(@article)
   end
@@ -33,7 +33,7 @@ class ArticlesController < ApplicationController
 
   private
 
-  def articles_params
+  def article_params
     params.require(:article).permit(:title, :content)
   end
 

@@ -4,15 +4,23 @@
 
 
 <br>
+<button class="btn btn-warning">
   <%= link_to "Ajouter un article", new_article_path(@article) %>
+</button>
 <br>
 <br>
+<button class="btn btn-warning">
   <%= link_to "Modifier", edit_article_path(@article) %>
+</button>
 <br>
 <br>
+<button class="btn btn-danger">
   <%= link_to "Supprimer", article_path(@article),
     data: {turbo_method: "delete", turbo_confirm: "Etes vous sur?"}
   %>
+</button>
 <br>
 <br>
+<button class="btn btn-warning">
   <%= link_to "Retour à la liste", articles_path%>
+</button>
